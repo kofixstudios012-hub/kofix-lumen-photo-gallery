@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0a0a0a">
+<title>Private gallery</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div id="app">
+  <main class="center" id="gate">
+    <form class="auth hidden" id="pwform">
+      <p class="brandline"><span class="brand">Lum<b>e</b>n</span></p>
+      <h1 id="gtitle">Private gallery</h1>
+      <p class="muted" id="gsub">Enter the password you were given to view these photos.</p>
+      <label class="field"><span>Password</span>
+        <input type="password" id="pw" autocomplete="current-password" required>
+      </label>
+      <p class="msg" id="pwmsg" role="alert"></p>
+      <button class="btn full">View gallery</button>
+    </form>
+    <div class="auth hidden" id="gone">
+      <h1>Link unavailable</h1>
+      <p class="muted">This gallery link is no longer available. It may have expired or been withdrawn. Please contact the person who sent it.</p>
+    </div>
+    <p class="muted" id="loading">Loading…</p>
+  </main>
+  <div id="view" class="hidden">
+    <header class="gal-head">
+      <div><div class="kicker" id="vkind"></div><h1 id="vtitle"></h1></div>
+      <span class="spacer"></span>
+      <a class="btn small hidden" id="zipbtn">Download all (ZIP)</a>
+    </header>
+    <div class="mason" id="grid"></div>
+    <p class="foot-note" id="vfoot"></p>
+  </div>
+</div>
+<div class="lb hidden" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="stage"><img id="lbimg" alt=""><div class="wm hidden" id="lbwm"></div></div>
+  <span class="cnt" id="lbcnt"></span>
+  <div class="ctl"><a class="btn small hidden" id="lbdl">Download</a><button class="btn ghost small" id="lbclose" aria-label="Close viewer">Close ✕</button></div>
+  <button class="nav prev" id="lbprev" aria-label="Previous photo">‹</button>
+  <button class="nav next" id="lbnext" aria-label="Next photo">›</button>
+</div>
+<script src="/assets/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "lumen-private-galleries",
+  "version": "1.0.0",
+  "description": "Private, password-protected photo galleries with view-only, download and full-access sharing modes.",
+  "private": true,
+  "license": "MIT",
+  "main": "server.js",
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  },
+  "dependencies": {}
+}

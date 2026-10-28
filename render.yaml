@@ -1,0 +1,34 @@
+# Render "Blueprint": one click deploys the app on Render's free plan (no credit card).
+# Render dashboard -> New -> Blueprint -> pick your GitHub repo containing this project.
+services:
+  - type: web
+    name: lumen
+    runtime: node
+    plan: free
+    buildCommand: "echo no build step - this app has zero dependencies"
+    startCommand: node server.js
+    healthCheckPath: /robots.txt
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      # Fill these in on the Render dashboard (they are secrets, so they are NOT stored in this file):
+      - key: OWNER_PASSWORD
+        sync: false
+      - key: S3_ENDPOINT
+        sync: false
+      - key: S3_BUCKET
+        sync: false
+      - key: S3_KEY_ID
+        sync: false
+      - key: S3_APP_KEY
+        sync: false
+      - key: TURSO_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+      - key: STORAGE_LIMIT_GB
+        value: "9.5"

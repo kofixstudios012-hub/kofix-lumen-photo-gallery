@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0a">
+<title>Studio · Lumen</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">Lum<b>e</b>n</a>
+  <span class="spacer"></span>
+  <div class="meter" id="meter" aria-live="polite">
+    <div class="bar"><i id="meterbar"></i></div>
+    <small id="metertext">Loading storage…</small>
+  </div>
+  <button class="btn ghost small" id="logout">Sign out</button>
+</header>
+<div class="banner hidden" id="banner" role="alert"></div>
+
+<main class="dash">
+  <aside>
+    <form class="row" id="newform">
+      <input type="text" id="newtitle" class="grow" placeholder="New gallery name" maxlength="80" aria-label="New gallery name" required>
+      <button class="btn">Create</button>
+    </form>
+    <div class="glist" id="glist"></div>
+  </aside>
+  <section id="detail">
+    <div class="panel"><p class="muted">Create a gallery, or select one on the left.</p></div>
+  </section>
+</main>
+<script src="/assets/dashboard.js"></script>
+</body>
+</html>
